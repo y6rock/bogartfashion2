@@ -43,8 +43,9 @@ const PromotionsBanner = () => {
 
   return (
     <div style={{
-      backgroundColor: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      backgroundColor: 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)',
+      background: 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)',
+      border: '1px solid #C2883A',
       color: 'white',
       padding: '15px 20px',
       position: 'relative',

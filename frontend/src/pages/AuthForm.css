@@ -5,16 +5,17 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #f0f2f5;
+  background: #111;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .auth-form-wrapper {
-  background: #fff;
+  background: #222;
+  border: 1px solid #C2883A;
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(194, 136, 58, 0.2);
   width: 100%;
   max-width: 450px; /* Adjusted for a better look on login/signup */
   text-align: center;
@@ -23,11 +24,11 @@
 .auth-form-wrapper h2 {
   font-size: 1.8em;
   margin-bottom: 10px;
-  color: #333;
+  color: #C2883A;
 }
 
 .auth-form-wrapper .auth-form-subtitle {
-  color: #666;
+  color: #ccc;
   margin-bottom: 30px;
   font-size: 0.95em;
 }
@@ -61,15 +62,17 @@
 .auth-input-group input {
   width: 100%; /* Let the container's padding handle space */
   padding: 12px 15px 12px 45px; /* Left padding for icon */
-  border: 1px solid #ddd;
+  border: 1px solid #555;
   border-radius: 5px;
   font-size: 1em;
   box-sizing: border-box;
   transition: border-color 0.3s;
+  background: #333;
+  color: #fff;
 }
 
 .auth-input-group input:focus {
-  border-color: #007bff;
+  border-color: #C2883A;
   outline: none; /* Remove default focus outline */
 }
 
@@ -89,20 +92,20 @@
 }
 
 .auth-form-links a {
-  color: #007bff;
+  color: #C2883A;
   text-decoration: none;
   font-size: 0.9em;
   transition: color 0.3s;
 }
 
 .auth-form-links a:hover {
-  color: #0056b3;
+  color: #a6762e;
 }
 
 .auth-submit-button {
   width: 100%;
   padding: 12px;
-  background: #007bff;
+  background: #C2883A;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -113,7 +116,7 @@
 }
 
 .auth-submit-button:hover {
-  background-color: #0056b3;
+  background-color: #a6762e;
 }
 
 .auth-submit-button:disabled {
@@ -141,15 +144,15 @@
 .auth-redirect-link {
     margin-top: 25px;
     font-size: 0.95em;
-    color: #666;
+    color: #ccc;
 }
 
 .auth-redirect-link a {
-    color: #007bff;
+    color: #C2883A;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .auth-redirect-link a:hover {
-    color: #0056b3;
+    color: #a6762e;
 } 

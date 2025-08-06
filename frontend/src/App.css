@@ -1,5 +1,5 @@
 body {
-  background-color: red !important;
+  background-color: #111 !important;
 }
 
 /* .App {
@@ -29,7 +29,7 @@ body {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #C2883A;
 }
 
 @keyframes App-logo-spin {
@@ -46,8 +46,8 @@ body {
   top: 15px;
   left: 15px;
   z-index: 1050;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #333;
+  border: 1px solid #555;
   border-radius: 5px;
   padding: 8px;
   cursor: pointer;

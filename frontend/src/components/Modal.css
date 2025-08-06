@@ -14,10 +14,11 @@
 }
 
 .modal-content {
-  background: white;
+  background: #222;
+  border: 1px solid #C2883A;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   width: 90%;
   max-width: 600px;
   max-height: 90vh;
@@ -27,7 +28,7 @@
 .modal-content h2 {
   margin-top: 0;
   margin-bottom: 25px;
-  color: #333;
+  color: #C2883A;
 }
 
 /* Form Styles inside Modal */
@@ -45,7 +46,7 @@
 .form-group label {
   margin-bottom: 5px;
   font-weight: bold;
-  color: #555;
+  color: #ccc;
 }
 
 .form-group input,
@@ -53,10 +54,12 @@
 .form-group select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #555;
   border-radius: 4px;
   font-size: 1em;
   box-sizing: border-box;
+  background: #333;
+  color: #fff;
 }
 
 .form-row {
@@ -79,8 +82,8 @@
   text-align: center;
   padding: 10px;
   border-radius: 4px;
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: #333;
+  color: #ccc;
 }
 
 .form-actions {
@@ -102,11 +105,11 @@
 }
 
 .submit-btn {
-  background-color: #007bff;
+  background-color: #C2883A;
   color: white;
 }
 
 .cancel-btn {
-  background-color: #6c757d;
+  background-color: #555;
   color: white;
 } 

@@ -1,12 +1,12 @@
 /* Base Styles for the Header */
 .header-nav {
   padding: 10px 20px;
-  background: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
+  background: #1a1a1a;
+  border-bottom: 1px solid #C2883A;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(194, 136, 58, 0.2);
   position: relative; /* Needed for the mobile menu positioning */
 }
 
@@ -18,7 +18,7 @@
 
 .header-nav-links a, .header-auth-links a, .header-auth-links button {
   padding: 8px 12px;
-  color: #333;
+  color: #fff;
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.2s;
@@ -29,7 +29,8 @@
 }
 
 .header-nav-links a:hover, .header-auth-links a:hover {
-  background-color: #f0f0f0;
+  background-color: #333;
+  color: #C2883A;
 }
 
 .header-nav-links .cart-link {
@@ -40,7 +41,7 @@
   position: absolute;
   top: -5px;
   right: -5px;
-  background-color: #ff4500;
+  background-color: #C2883A;
   color: white;
   border-radius: 50%;
   padding: 2px 6px;
@@ -49,7 +50,7 @@
 }
 
 .header-auth-welcome a {
-  color: #1976D2;
+  color: #C2883A;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.2s;
@@ -57,8 +58,8 @@
 
 .header-auth-logout-btn {
   padding: 4px 8px !important;
-  border: 1px solid #1976D2 !important;
-  color: #1976D2 !important;
+  border: 1px solid #C2883A !important;
+  color: #C2883A !important;
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.8rem !important;
@@ -67,7 +68,7 @@
 
 .manager-link {
   padding: 8px 12px;
-  color: #1976D2 !important;
+  color: #C2883A !important;
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
@@ -100,7 +101,7 @@
 .hamburger-menu div {
   width: 2rem;
   height: 0.25rem;
-  background: #333;
+  background: #C2883A;
   border-radius: 10px;
   transition: all 0.3s linear;
   position: relative;
@@ -116,8 +117,9 @@
     top: 100%; /* Position below the header */
     left: 0;
     width: 100%;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #1a1a1a;
+    border: 1px solid #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     z-index: 100; /* Ensure menu appears above other content */
   }
 
@@ -136,7 +138,7 @@
     padding: 15px 20px;
     width: 100%;
     text-align: left;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #333;
   }
 
   .hamburger-menu {

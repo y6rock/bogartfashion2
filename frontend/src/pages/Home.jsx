@@ -4,13 +4,13 @@ import axios from 'axios';
 import PromotionsBanner from '../components/PromotionsBanner';
 import './Home.css'; // Import the new CSS file
 
-// Import existing images as fallbacks
-import laptopsImage from '../assets/images/laptops.jpeg';
-import smartphonesImage from '../assets/images/smartphones.jpg';
-import desktopsImage from '../assets/images/desktops.jpeg';
-import gamingMouseImage from '../assets/images/gaming_mouse.jpg';
-import keyboardsImage from '../assets/images/keyboards.jpg';
-import monitorsImage from '../assets/images/monitors.jpeg';
+// Using online fashion stock images for better representation
+const mensImage = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&crop=face';
+const womensImage = 'https://images.unsplash.com/photo-1494790108755-2616c9c9b8a0?w=400&h=300&fit=crop&crop=face';
+const accessoriesImage = 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=300&fit=crop';
+const shoesImage = 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop';
+const bagsImage = 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop';
+const jewelryImage = 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=300&fit=crop';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -42,12 +42,12 @@ const Home = () => {
   }
 
   const displayCategories = [
-    { name: 'Men\'s Fashion', description: 'Sophisticated men\'s clothing including suits, casual wear, and formal attire. Discover timeless style and modern elegance.', imageUrl: laptopsImage },
-    { name: 'Women\'s Fashion', description: 'Elegant women\'s clothing featuring dresses, tops, skirts, and formal wear. Express your unique style with our curated collection.', imageUrl: smartphonesImage },
-    { name: 'Accessories', description: 'Complete your look with our premium accessories including belts, scarves, hats, and fashion jewelry to enhance your style.', imageUrl: desktopsImage },
-    { name: 'Shoes', description: 'Step into style with our collection of footwear including formal shoes, casual sneakers, and elegant heels for every occasion.', imageUrl: gamingMouseImage },
-    { name: 'Bags & Handbags', description: 'Carry your essentials in style with our collection of designer bags, handbags, and luggage for every need.', imageUrl: keyboardsImage },
-    { name: 'Jewelry', description: 'Adorn yourself with our exquisite jewelry collection featuring rings, necklaces, earrings, and watches for that perfect finishing touch.', imageUrl: monitorsImage },
+    { name: 'Men\'s Fashion', description: 'Sophisticated men\'s clothing including suits, casual wear, and formal attire. Discover timeless style and modern elegance.', imageUrl: mensImage },
+    { name: 'Women\'s Fashion', description: 'Elegant women\'s clothing featuring dresses, tops, skirts, and formal wear. Express your unique style with our curated collection.', imageUrl: womensImage },
+    { name: 'Accessories', description: 'Complete your look with our premium accessories including belts, scarves, hats, and fashion jewelry to enhance your style.', imageUrl: accessoriesImage },
+    { name: 'Shoes', description: 'Step into style with our collection of footwear including formal shoes, casual sneakers, and elegant heels for every occasion.', imageUrl: shoesImage },
+    { name: 'Bags & Handbags', description: 'Carry your essentials in style with our collection of designer bags, handbags, and luggage for every need.', imageUrl: bagsImage },
+    { name: 'Jewelry', description: 'Adorn yourself with our exquisite jewelry collection featuring rings, necklaces, earrings, and watches for that perfect finishing touch.', imageUrl: jewelryImage },
   ];
 
   return (
