@@ -5,8 +5,8 @@ import PromotionsBanner from '../components/PromotionsBanner';
 import './Home.css'; // Import the new CSS file
 
 // Using online fashion stock images for better representation
-const mensImage = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&crop=face';
-const womensImage = 'https://images.unsplash.com/photo-1494790108755-2616c9c9b8a0?w=400&h=300&fit=crop&crop=face';
+const mensImage = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop';
+const womensImage = 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=300&fit=crop';
 const accessoriesImage = 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=300&fit=crop';
 const shoesImage = 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop';
 const bagsImage = 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop';

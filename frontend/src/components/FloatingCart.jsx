@@ -61,7 +61,7 @@ const FloatingCart = () => {
         bottom: '32px',
         right: '32px',
         zIndex: 1000,
-        background: '#fff',
+        background: '#222',
         borderRadius: '50%',
         boxShadow: '0 2px 12px rgba(0,0,0,0.18)',
         width: '64px',
@@ -75,13 +75,13 @@ const FloatingCart = () => {
       }}
       title="View Cart"
     >
-      <FaShoppingCart size={32} color="#1976D2" />
+      <FaShoppingCart size={32} color="#C2883A" />
       {itemCount > 0 && (
         <span style={{
           position: 'absolute',
           top: '-6px',
           right: '-6px',
-          background: '#ff5252',
+          background: '#C2883A',
           color: '#fff',
           borderRadius: '50%',
           padding: '2px 8px',

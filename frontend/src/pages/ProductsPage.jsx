@@ -246,10 +246,22 @@ const ProductsPage = () => {
                 <div key={product.product_id} className={`product-card ${isOutOfStock ? 'out-of-stock' : ''}`}>
                   <div className="product-image-container">
                     {product.image ? (
-                      <img src={product.image && product.image.startsWith('/uploads') ? `http://localhost:3001${product.image}` : product.image || 'https://via.placeholder.com/150'} alt={product.name} className="product-image" />
-                    ) : (
-                      <div className="product-placeholder-image">Product Image</div>
-                    )}
+                      <img 
+                        src={product.image && product.image.startsWith('/uploads') ? `http://localhost:3001${product.image}` : product.image} 
+                        alt={product.name} 
+                        className="product-image"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                    ) : null}
+                    <div className="product-placeholder-image" style={{ display: product.image ? 'none' : 'flex' }}>
+                      <div style={{ textAlign: 'center', color: '#C2883A', fontSize: '1.2em' }}>
+                        <div style={{ fontSize: '3em', marginBottom: '10px' }}>👕</div>
+                        <div>Fashion Item</div>
+                      </div>
+                    </div>
                     {isOutOfStock && (
                       <div className="out-of-stock-badge">
                         {!hasValidStock ? 'Invalid Stock' : 'Out of Stock'}

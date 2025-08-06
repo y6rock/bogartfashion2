@@ -101,7 +101,31 @@ const OrderHistory = ({ userId }) => {
                 {(Array.isArray(order.items) ? order.items : []).map(item => (
                   <li key={item.product_id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 0', borderBottom: '1px dashed #f0f0f0' }}>
                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                      <img src={item.product_image && item.product_image.startsWith('/uploads') ? `http://localhost:3001${item.product_image}` : item.product_image || 'https://via.placeholder.com/50'} alt={item.product_name} style={{ width: '50px', height: '50px', objectFit: 'cover', marginRight: '15px', borderRadius: '4px' }}/>
+                      {item.product_image ? (
+                        <img 
+                          src={item.product_image && item.product_image.startsWith('/uploads') ? `http://localhost:3001${item.product_image}` : item.product_image} 
+                          alt={item.product_name} 
+                          style={{ width: '50px', height: '50px', objectFit: 'cover', marginRight: '15px', borderRadius: '4px' }}
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                            e.target.nextSibling.style.display = 'flex';
+                          }}
+                        />
+                      ) : null}
+                      <div style={{ 
+                        display: item.product_image ? 'none' : 'flex',
+                        width: '50px', 
+                        height: '50px', 
+                        backgroundColor: '#333', 
+                        borderRadius: '4px', 
+                        alignItems: 'center', 
+                        justifyContent: 'center',
+                        color: '#C2883A',
+                        fontSize: '1.2em',
+                        marginRight: '15px'
+                      }}>
+                        👕
+                      </div>
                       <span>{item.product_name} (x{item.quantity})</span>
                     </div>
                     <span>{formatPrice(item.price * item.quantity, currency)}</span>

@@ -64,17 +64,30 @@ export default function ProductDetails() {
     <div style={{ maxWidth: 1100, margin: '40px auto', display: 'flex', gap: 40, alignItems: 'flex-start', fontFamily: 'Arial, sans-serif' }}>
       <button onClick={() => navigate(-1)} style={{ position: 'absolute', left: 30, top: 30, background: 'none', border: 'none', color: '#2563eb', cursor: 'pointer', fontSize: '1em' }}>&lt; Back to all products</button>
       <div className="product-image-container">
-        <img
-          src={
-            product.image
-              ? product.image && product.image.startsWith('/uploads')
-                ? `http://localhost:3001${product.image}`
-                : product.image
-              : 'https://via.placeholder.com/400'
-          }
-          alt={product.name}
-          className="product-main-image"
-        />
+        {product.image ? (
+          <img
+            src={product.image && product.image.startsWith('/uploads') ? `http://localhost:3001${product.image}` : product.image}
+            alt={product.name}
+            className="product-main-image"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+        ) : null}
+        <div style={{ 
+          display: product.image ? 'none' : 'flex',
+          width: '400px', 
+          height: '400px', 
+          backgroundColor: '#333', 
+          borderRadius: '8px', 
+          alignItems: 'center', 
+          justifyContent: 'center',
+          color: '#C2883A',
+          fontSize: '4em'
+        }}>
+          👕
+        </div>
       </div>
       <div className="product-info-container">
         <h1 className="product-title">{product.name}</h1>

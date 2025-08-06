@@ -59,12 +59,26 @@ const Cart = () => {
             <div key={item.product_id} className="cart-item">
               <div className="cart-item-image">
                 <img
-                  src={item.image && item.image.startsWith('/uploads') ? `http://localhost:3001${item.image}` : item.image || 'https://via.placeholder.com/150'}
+                  src={item.image && item.image.startsWith('/uploads') ? `http://localhost:3001${item.image}` : item.image}
                   alt={item.name}
                   onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/150';
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
                   }}
                 />
+                <div style={{ 
+                  display: item.image ? 'none' : 'flex',
+                  width: '80px', 
+                  height: '80px', 
+                  backgroundColor: '#333', 
+                  borderRadius: '6px', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  color: '#C2883A',
+                  fontSize: '1.5em'
+                }}>
+                  👕
+                </div>
               </div>
               <div className="cart-item-details">
                 <h3>{item.name}</h3>
